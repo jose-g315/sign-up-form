@@ -1,10 +1,9 @@
-/* Fonts from Google Fonts */
+/* Fonts from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IM+Fell+English+SC&display=swap');
 .im-fell-english-sc-regular {
     font-family: "IM Fell English SC", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 4rem;
   }
   .cinzel-normal {
     font-family: "Cinzel", serif;
@@ -12,106 +11,119 @@
     font-weight: 600;
     font-style: normal;
   }
-/* **************************************************************************** */
-* {
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1rem;
+/* CSS reset */
+*, *::before, *::after {
     box-sizing: border-box;
+}
+* {
     margin: 0;
-    padding: 0;
+    color: darkslategray;
 }
-/* **************************************************************************** */
-.container {
-    display: flex;
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+/*  */
+body {
+    background-image: url(./images/mauricio-santos-N1gFsYf9AI0-unsplash\ .jpg);
     height: 100vh;
-}
-/* **************************************************************************** */
-.right-form {
-    flex: 1.5;
-    background-color: hsl(35, 95%, 85%);
-}
-.header {
-    padding-top: 25px;
-    text-align: center;
-    align-content: center;
-}
-.message {
-    text-align: center;
-    align-content: center;
-    font-size: 1.3rem;
-    padding: 25px;
-}
-form {
-    text-align: center;
-}
-.form-row {
-    padding: 17px;
-    background-color: hsl(35, 95%, 97%);
-}
-.two, .three {
+    background-position: center;
+    background-size: cover;
     display: flex;
-    text-align: start;
-    gap: 50px;
-    justify-content: center;
+    flex-direction: column;
 }
-fieldset {
-    width: 75%;
-    border: 2px double black;
+/* header styles */
+.header-wrapper {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    
+}
+h1 {
+    font-size: clamp(2rem, 0rem + 2.2vw, 4rem);
+}
+p {
+    font-size: clamp(1.2rem, 0rem + 2.2vw, 1.6rem);
+}
+.attribute,a{
+    color: whitesmoke;
+}
+/* form styles */
+.form-wrapper {
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto; 
+    width: clamp(450px, 800px, 75vw);
+    min-height: 80vh;
+    background-color: wheat;
+    opacity: .95;
+    padding: 20px;
+    border: 7px solid hsl(240, 1%, 30%);
+    border-radius: 5px;
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section {
+    flex: auto;
+    padding: 10px;
+}
+fieldset {
+    padding: 10px;
 }
 legend {
-    width: 75%;
-    color: white;
-    background-color: black;
-    padding: 5px 10px;
-    font-size: 1.3rem;
+    text-align: center;
+    background-color: hsl(240, 1%, 30%);
+    color: whitesmoke;
 }
-
-input[type="radio"] {
-    width: 100%;
+.house-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input, input[type="radio"] {
     margin-bottom: 5px;
 }
-input[type="checkbox"] {
-    margin-right: 15px;
-    margin-left: 2px;
+.info-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-input {
-    border: 4px solid hsl(147, 30%, 20%);
-    border-radius: 5px;
+.info-wrapper > div {
+    display: flex;
+    flex-direction: column;
+}
+.four {
+    justify-self: flex-end;
+}
+.submit-btn {
+    border-radius: 10px;
     padding: 5px;
-    background-color: hsl(25, 25%, 98%);
-}
-input:invalid {
-    border-color: hsl(0, 55%, 60%);
-  }
-
-.submit-button {
-    width: 150px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: hsl(16, 100%, 70%);
-}
-.submit-button:hover {
-    background-color: hsl(16, 100%, 60%);
-}
-.submit-button:active {
-    transform: translateY(2px);
-}
-/* **************************************************************************** */
-.left-image {
-    flex: 1;
-    background-image: url(./images/house-of-the-dragon-for-iphone-screens-tcyukcel2vv9z2mb.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color:whitesmoke;
-    text-align: center;
-    align-content: end;
-    padding-bottom: 25px;
-}
-a {
+    background-color: hsl(240, 3%, 30%);
     color: whitesmoke;
+}
+.submit-btn:hover {
+    background-color: hsl(240, 1%, 45%);
+}
+.submit-btn:active {
+    transform: translateY(3px);
+}
+/* input validation */
+input:valid {
+    border: 3px solid green;
+} 
+input:invalid {
+    border: 3px solid red;
 }

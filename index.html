@@ -7,63 +7,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <div class="container">
-    <div class="left-image"><a href="https://wallpapers.com/wallpapers/house-of-the-dragon-for-iphone-screens-tcyukcel2vv9z2mb.html">Wallpaper by topcat</a> on Wallpapers.com</div>
-    <div class="right-form"> 
-        <div class="header im-fell-english-sc-regular">House of the Dragon <br> Season Two Watch Party</div>
-        <div class="message">Are you ready to enjoy the new season of House of the Dragon? <br>
-        Come join our season premier Sunday June 16th 2024. <br>
-        Spots are limited so sing up now!
+    <div class="form-wrapper">
+        <div class="header-wrapper im-fell-english-sc-regular">
+            <h1>House of the Dragon <br> Season Three Watch Party</h1><br>
+            <p>Are you excited for the third season of House of the Dragon? <br>
+                Come join our watch party which will be held in mid 2026. <br>
+                Spots are limited so sign up now!
+            </p>
         </div>
-        <form action="" method="get">
-            <div class="form-row one">
-                <fieldset>
-                    <legend>What side are you supporting?</legend><br>
+        <form action="" method="post" class="cinzel-normal">
+            <section class="one">
+                <fieldset class="house-choice">
+                    <legend>What side are you supporting?</legend>
+                    <label for="undecided">Undecided</label>
+                    <input type="radio" name="house" id="undecided" checked>
                     <label for="targaryen">Targaryen</label>
                     <input type="radio" name="house" id="targaryen">
                     <label for="hightower">Hightower</label>
                     <input type="radio" name="house" id="hightower">
-                    <label for="undecided">Undecided</label>
-                    <input type="radio" name="house" id="undecided" checked>
                 </fieldset>
-            </div>
-            <div class="form-row two">
-                <div>
-                    <label for="firstName">*First Name:</label><br>
-                    <input type="text" id="firstName" placeholder="Jon" required>
-                </div>
-                <div>
-                    <label for="lastName">*Last Name:</label><br>
-                    <input type="text" id="lastName" placeholder="Snow" required>
-                </div>
-            </div>
-            <div class="form-row three">
-                <div>
-                    <label for="number">*Phone Number:</label><br>
-                    <input type="tel" id="number" placeholder="123-456-7890" maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="email" id="email" placeholder="jonsnow@email.com" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
-                </div>
-            </div>
-            <div class="form-row four">
-                What snacks can you bring? <br><br>
-                <label for="chips">Chips</label>
-                <input type="checkbox" name="snack" id="chips">
-                <label for="fruit">Fruit</label>
-                <input type="checkbox" name="snack" id="fruit">
-                <label for="soda">Soda</label>
-                <input type="checkbox" name="snack" id="soda">
-                <label for="beer">Beer</label>
-                <input type="checkbox" name="snack" id="beer">
-            </div>
-            <div class="form-row five">
-                <button class="submit-button" type="submit">Count Me In!</button>
-            </div>
+            </section>
+            <section class="two">
+                <fieldset class="contact-info">
+                    <legend>Contact Information</legend>
+                    <div class="info-wrapper">
+                        <div class>
+                            <label for="fName">*First Name</label>
+                            <input type="text" id="fName" placeholder="Jon" required>
+                        </div>
+                        <div>
+                            <label for="lName">*Last Name</label>
+                            <input type="text" id="lName" placeholder="Snow" required>
+                        </div>
+                    </div>
+                    <div class="info-wrapper">
+                        <div>
+                            <label for="pNumber">*Phone Number</label>
+                            <input type="tel" id="pNumber" placeholder="123-456-7890" minlength="12" maxlength="12" pattern="[0-9{3}-[0-9]{3}-[0-9]{4}]"required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="jonsnow@email.com" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                        </div>
+                    </div>
+                    </fieldset>
+            </section>
+            <section class="three">
+                <fieldset class="snacks-list">
+                    <legend>What snacks can you bring?</legend>
+                    <label for="chips">Chips</label>
+                    <input type="checkbox" name="snack" id="chips">
+                    <label for="fruit">Fruit</label>
+                    <input type="checkbox" name="snack" id="fruit">
+                    <label for="soda">Soda</label>
+                    <input type="checkbox" name="snack" id="soda">
+                    <label for="beer">Beer</label>
+                    <input type="checkbox" name="snack" id="beer">
+                </fieldset>
+            </section>
+            <section class="four">
+                <button class="submit-btn" type="submit">Count Me In!</button>
+            </section>
         </form>
     </div>
-   </div>
+    <div class="attribute">Photo by <a href="https://unsplash.com/@souomau?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">mauRÍCIO SANTOS</a> on <a href="https://unsplash.com/photos/closeup-photo-of-brown-map-N1gFsYf9AI0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+    </div>
    <script src="main.js"></script>
 </body>
 </html>
